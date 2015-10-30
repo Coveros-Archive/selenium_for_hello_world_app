@@ -20,7 +20,7 @@ public class SeleniumMain {
 		WebDriver driver = new RemoteWebDriver(new URL("http://ec2-52-23-194-123.compute-1.amazonaws.com:4444/wd/hub"), capability);
 		
 		// And now use this to visit Google
-        driver.get("http://ec2-52-23-233-253.compute-1.amazonaws.com:8080/hello-world-1.0.2/");
+        driver.get("http://ec2-54-172-12-1.compute-1.amazonaws.com:8080/hello-world-1.0.2/");
 
         // Find the text input element by its name
         WebElement element = driver.findElement(By.tagName("h2"));
