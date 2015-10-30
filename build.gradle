@@ -12,7 +12,12 @@ sourceSets {
         }
     }
 }
-
+jar {
+    manifest {
+        attributes("Implementation-Title": "Hello World",
+                   "Implementation-Version": version)
+    }
+}
 //create a single Jar with all dependencies
 task createJar(type: Jar) {
 	manifest {
