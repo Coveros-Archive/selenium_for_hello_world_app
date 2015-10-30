@@ -4,6 +4,19 @@ apply plugin: 'eclipse'
 version = '1.0'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+//Get dependencies from Maven central repository
+repositories {
+    mavenCentral()
+    flatDir {
+       dirs 'lib'
+   }
+    
+}
+
+//Project dependencies
+dependencies {
+	compile name: 'selenium-server-standalone-2.48.2'
+}
 
 sourceSets {
     main {
@@ -32,16 +45,3 @@ task createJar(type: Jar) {
     with jar
 }
 
-//Get dependencies from Maven central repository
-repositories {
-    mavenCentral()
-    flatDir {
-       dirs 'lib'
-   }
-    
-}
-
-//Project dependencies
-dependencies {
-	compile name: 'selenium-server-standalone-2.48.2'
-}
