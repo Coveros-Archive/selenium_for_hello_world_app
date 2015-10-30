@@ -18,6 +18,7 @@ jar {
                    "Implementation-Version": version,
                    'Main-Class': 'com.coveros.hello_world_selenium.SeleniumMain')
     }
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 }
 //create a single Jar with all dependencies
 task createJar(type: Jar) {
@@ -27,7 +28,7 @@ task createJar(type: Jar) {
         	'Main-Class': 'com.coveros.hello_world_selenium.SeleniumMain'
     }
     baseName = project.name + '-all'
-    from 'src'
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     with jar
 }
 
