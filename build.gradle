@@ -5,6 +5,14 @@ version = '1.0'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+
 //create a single Jar with all dependencies
 task createJar(type: Jar) {
 	manifest {
