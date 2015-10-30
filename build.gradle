@@ -15,7 +15,8 @@ sourceSets {
 jar {
     manifest {
         attributes("Implementation-Title": "Hello World",
-                   "Implementation-Version": version)
+                   "Implementation-Version": version,
+                   'Main-Class': 'com.coveros.hello_world_selenium.SeleniumMain')
     }
 }
 //create a single Jar with all dependencies
